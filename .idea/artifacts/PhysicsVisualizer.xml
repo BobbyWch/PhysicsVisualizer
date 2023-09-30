@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PhysicsVisualizer">
+    <output-path>$PROJECT_DIR$/out/artifacts/PhysicsVisualizer</output-path>
+    <root id="archive" name="PhysicsVisualizer.jar">
+      <element id="module-output" name="PhysicsVisualizer" />
+    </root>
+  </artifact>
+</component>

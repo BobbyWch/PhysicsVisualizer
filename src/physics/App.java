@@ -7,7 +7,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        System.out.println("l");
+
+        stage.show();
     }
 
     public static void main(String[] args) {
