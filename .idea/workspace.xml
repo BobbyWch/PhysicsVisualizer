@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="227248df-3e4f-451e-84cb-c67a8ce4b771" name="更改" comment="" />
+    <list default="true" id="227248df-3e4f-451e-84cb-c67a8ce4b771" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2W6GHZQlL0BAmh1ZmLo2BJQEMZG" />
   <component name="ProjectViewState">
@@ -17,22 +22,35 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Document/GitHub/PhysicsVisualizer/Dependency/javafx-sdk-17.0.8/src.zip",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "库",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AndyApp">
+    <configuration name="AndyApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="physics.App" />
+      <module name="PhysicsVisualizer" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Lenovo\Documents\GitHub\PhysicsVisualizer\Dependency\javafx-sdk-17.0.8\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BobbyApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="physics.App" />
       <module name="PhysicsVisualizer" />
@@ -41,6 +59,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.BobbyApp" />
+      <item itemvalue="Application.AndyApp" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -51,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696045532071</updated>
       <workItem from="1696045533098" duration="519000" />
+      <workItem from="1696046143093" duration="1601000" />
     </task>
     <servers />
   </component>
