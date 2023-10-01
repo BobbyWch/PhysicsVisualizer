@@ -11,6 +11,9 @@ public class World {
     private final LinkedList<Ticking> tickings=new LinkedList<>();
     public void runTicksAndWait(int tickNum) throws InterruptedException {
         int delay= ((int) (tickTime * 1000));
+        for (Ticking t:tickings){
+            t.prepareTicking();
+        }
         long t1=System.currentTimeMillis(),t2;
         for (int i=0;i<tickNum;i++){
             tick();
@@ -21,7 +24,7 @@ public class World {
             t1=t2;
         }
     }
-    public void tick(){
+    private void tick(){
         for (Ticking t:tickings){
             t.tick();
         }
