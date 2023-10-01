@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="227248df-3e4f-451e-84cb-c67a8ce4b771" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/physics/engine/model/CoordinateSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics/engine/model/Force.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics/engine/model/Force.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/physics/engine/model/Vector2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/physics/engine/model/Vector2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +104,7 @@
       <workItem from="1696059925784" duration="89000" />
       <workItem from="1696060029703" duration="7074000" />
       <workItem from="1696079464270" duration="696000" />
+      <workItem from="1696167747786" duration="1322000" />
     </task>
     <servers />
   </component>

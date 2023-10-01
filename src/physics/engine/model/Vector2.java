@@ -50,6 +50,7 @@ public class Vector2 {
     public double length(){
         return Math.sqrt(this.x*this.x+this.y*this.y);
     }
+
     public double rad(){
         return StrictMath.atan2(this.y, this.x);
     }
