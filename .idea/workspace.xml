@@ -57,7 +57,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.AndyApp">
+  <component name="RunManager" selected="应用程序.EngineTest">
     <configuration name="AndyApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="physics.App" />
       <module name="PhysicsVisualizer" />
@@ -75,7 +75,7 @@
       </method>
     </configuration>
     <configuration name="EngineTest" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="physics.engine.EngineTest" />
+      <option name="MAIN_CLASS_NAME" value="physics.engine.TestUI" />
       <module name="PhysicsVisualizer" />
       <option name="VM_PARAMETERS" value="--module-path &quot;D:\Document\GitHub\PhysicsVisualizer\Dependency\javafx-sdk-17.0.8\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
       <method v="2">
@@ -83,9 +83,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AndyApp" />
-      <item itemvalue="Application.BobbyApp" />
-      <item itemvalue="Application.EngineTest" />
+      <item itemvalue="应用程序.AndyApp" />
+      <item itemvalue="应用程序.BobbyApp" />
+      <item itemvalue="应用程序.EngineTest" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -104,6 +104,9 @@
       <workItem from="1696141943889" duration="3770000" />
       <workItem from="1696153212081" duration="12000" />
       <workItem from="1696166320449" duration="1034000" />
+      <workItem from="1696216405634" duration="2093000" />
+      <workItem from="1696221979589" duration="348000" />
+      <workItem from="1696222406787" duration="1492000" />
     </task>
     <servers />
   </component>

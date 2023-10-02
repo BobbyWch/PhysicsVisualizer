@@ -12,7 +12,7 @@ public class EngineTest {
         point.addVelocity(new Velocity(Math.atan2(1,2),Math.sqrt(5)));
         world.addObject(point);
         world.setTickTime(0.001);
-        world.runTicksAndWait(100);
-        System.out.println(point.pos);
+        world.runTicksAndWait(100,null);
+        System.out.println(point.center);
     }
 }

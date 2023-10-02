@@ -5,7 +5,7 @@ import physics.engine.model.Vector2;
 import physics.engine.model.VectorGroup;
 import physics.engine.model.Velocity;
 
-public class MotionObject extends BaseObject implements Ticking {
+public abstract class MotionObject extends BaseObject implements Ticking {
     private final VectorGroup<Velocity> velocity=new VectorGroup<>(new Velocity());
     public MotionObject(Vector2 pos) {
         super(pos);

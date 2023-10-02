@@ -11,6 +11,6 @@ public class Velocity extends Vector2 implements CanInteract{
     }
     @Override
     public void apply(BaseObject object) {
-        object.pos.add(this);
+        object.center.add(this);
     }
 }
