@@ -9,8 +9,9 @@ import java.awt.*;
  */
 public class Circle extends MotionObject implements CanPaint{
     public double r;
-    public Circle(Vector2 pos) {
+    public Circle(Vector2 pos,double r) {
         super(pos);
+        this.r=r;
     }
 
     @Override
@@ -24,5 +25,11 @@ public class Circle extends MotionObject implements CanPaint{
     @Override
     public void paint(Graphics2D g) {
         g.drawOval((int) center.x, (int) center.y, (int) (2*r), (int) (2*r));
+    }
+
+    @Override
+    public void move(double dx, double dy) {
+        center.x+=dx;
+        center.y+=dy;
     }
 }

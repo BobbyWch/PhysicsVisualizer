@@ -68,6 +68,13 @@ public class Vector2 {
         this.y += y;
     }
 
+    /**
+     * 叉乘
+     */
+    public double cross(Vector2 vector) {
+        return this.x * vector.y - this.y * vector.x;
+    }
+
     public double length(){
         return Math.sqrt(this.x*this.x+this.y*this.y);
     }
