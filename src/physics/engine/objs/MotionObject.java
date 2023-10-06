@@ -6,7 +6,7 @@ import physics.engine.model.VectorGroup;
 import physics.engine.model.Velocity;
 
 public abstract class MotionObject extends BaseObject implements Ticking {
-    private final VectorGroup<Velocity> velocity=new VectorGroup<>(new Velocity());
+    protected final VectorGroup<Velocity> velocity=new VectorGroup<>(new Velocity());
     public MotionObject(Vector2 pos) {
         super(pos);
     }

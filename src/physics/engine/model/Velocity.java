@@ -1,9 +1,8 @@
 package physics.engine.model;
 
-import physics.engine.objs.BaseObject;
 import physics.engine.objs.MotionObject;
 
-public class Velocity extends Vector2 implements CanInteract,Durative{
+public class Velocity extends CanInteract implements Durative{
     public int duration=-1;//单位：tick  -1表示无限
     public static Velocity newDirection(double rad, double size){
         Velocity v=new Velocity(rad);
@@ -23,10 +22,15 @@ public class Velocity extends Vector2 implements CanInteract,Durative{
     @Override
     public void apply(MotionObject object) {
         object.move(this.x,this.y);
-        if (duration!=-1){
-            if (--duration==0) {
-                object.removeVelocity(this);
-            }
-        }
+    }
+
+    @Override
+    public boolean tick() {
+        return duration!=-1&&--duration==0;
+    }
+
+    @Override
+    public int durTicks() {
+        return duration;
     }
 }

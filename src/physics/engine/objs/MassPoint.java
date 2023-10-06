@@ -20,11 +20,11 @@ public class MassPoint extends MotionObject implements CanPaint{
     @Override
     public void paint(Graphics2D g) {
         g.fillOval((int) center.x, (int) center.y,5,5);
+        g.drawString(center.x+","+center.y, (int) center.x, (int) center.y);
     }
 
     @Override
     public void move(double dx, double dy) {
-        center.x+=dx;
-        center.y+=dy;
+        center.add(dx,dy);
     }
 }

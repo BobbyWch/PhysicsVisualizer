@@ -2,11 +2,12 @@ package physics.engine.model;
 
 import physics.engine.objs.MotionObject;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
-public class VectorGroup<T extends Vector2> implements CanInteract{
+public class VectorGroup<T extends CanInteract> {
     public final LinkedList<T> vectors=new LinkedList<>();
-    public final LinkedList<T> durs=new LinkedList<>();
+    public final LinkedList<Durative> durs=new LinkedList<>();
     private final T sum;
     private boolean modified;
     public VectorGroup(T sum){
@@ -23,17 +24,30 @@ public class VectorGroup<T extends Vector2> implements CanInteract{
     public T getSum(){
         if (modified){
             sum.clear();
+            durs.clear();
             for (T e:vectors){
-                if (e instanceof Durative) durs.add(e);
-                else sum.add(e);
+                sum.add(e);
+                if (e instanceof Durative d) {
+                    if (d.durTicks()!=-1) durs.add(d);
+                }
             }
             modified=false;
         }
         return sum;
     }
 
-    @Override
     public void apply(MotionObject object) {
-
+        sum.apply(object);
+        Iterator<Durative> iterator=durs.iterator();
+        Durative d;
+        while (iterator.hasNext()){
+            d=iterator.next();
+            if (d.tick()) {
+                iterator.remove();
+                for (T vector:vectors){
+                    if (vector==d) sum.add(-vector.x,-vector.y);
+                }
+            }
+        }
     }
 }

@@ -20,6 +20,7 @@ public class World implements CanPaint {
         long t1=System.currentTimeMillis(),t2;
         for (int i=0;i<tickNum;i++){
             tick();
+            System.out.println("Tick:"+i);
             t2=System.currentTimeMillis();
             if (l!=null) l.tickEnd();
             if (t2-t1<delay){
@@ -36,6 +37,7 @@ public class World implements CanPaint {
     public void addObject(BaseObject o){
         objects.add(o);
         if (o instanceof Ticking t) tickings.add(t);
+        System.out.println("ticking:"+tickings.size());
     }
     public void removeObject(BaseObject o){
         objects.remove(o);

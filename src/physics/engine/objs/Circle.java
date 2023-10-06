@@ -25,11 +25,11 @@ public class Circle extends MotionObject implements CanPaint{
     @Override
     public void paint(Graphics2D g) {
         g.drawOval((int) center.x, (int) center.y, (int) (2*r), (int) (2*r));
+        g.drawString(center.x+","+center.y, (int) center.x, (int) center.y);
     }
 
     @Override
     public void move(double dx, double dy) {
-        center.x+=dx;
-        center.y+=dy;
+        center.add(dx,dy);
     }
 }

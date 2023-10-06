@@ -41,14 +41,15 @@ public class Polygon extends MotionObject{
         for (int i=0;i< size;i++){
             if (i+1==size) g.drawLine((int) points[i].x, (int) points[i].y, (int) points[0].x, (int) points[0].y);
             else g.drawLine((int) points[i].x, (int) points[i].y, (int) points[i+1].x, (int) points[i+1].y);
+            g.drawString(center.x+","+center.y, (int) center.x, (int) center.y);
         }
     }
 
     @Override
     public void move(double dx, double dy) {
         for (Vector2 p:points){
-            p.x+=dx;
-            p.y+=dy;
+            p.add(dx,dy);
         }
+        center.add(dx,dy);
     }
 }
