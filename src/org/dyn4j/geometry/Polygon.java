@@ -269,8 +269,12 @@ public class Polygon extends AbstractShape implements Convex, Wound, Shape, Tran
 		return null;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.dyn4j.geometry.Shape#contains(org.dyn4j.geometry.Vector, org.dyn4j.geometry.Transform)
+	/**
+	 * https://blog.51cto.com/u_15127680/3735036
+	 * 矢量叉乘判断
+	 * @param point world space point
+	 * @param transform {@link Transform} for this {@link Shape}
+	 * @return
 	 */
 	@Override
 	public boolean contains(Vector2 point, Transform transform) {

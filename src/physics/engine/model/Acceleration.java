@@ -3,10 +3,8 @@ package physics.engine.model;
 import physics.engine.objs.BaseObject;
 import physics.engine.objs.MotionObject;
 
-public class Force extends CanInteract {
-
-
-    public Force(double rad) {
+public class Acceleration extends CanInteract{
+    public Acceleration(double rad) {
         super(rad);
     }
 

@@ -6,8 +6,8 @@ package physics.engine.model;
 public class Vector2 {
     public static final Vector2 X=new Vector2(1,0);
     public static final Vector2 Y=new Vector2(0,1);
-    private double x;
-    private double y;
+    public double x;
+    public double y;
     public Vector2(){
         this(0,0);
     }
@@ -46,11 +46,42 @@ public class Vector2 {
         x*=t;
         y*=t;
     }
+    /**
+     * 旋转
+     */
+    public void rotate(double theta) {
+        double cos = StrictMath.cos(theta);
+        double sin = StrictMath.sin(theta);
+        double x = this.x;
+        double y = this.y;
+        this.x = x * cos - y * sin;
+        this.y = x * sin + y * cos;
+    }
+    /**
+     * 在坐标系中旋转
+     */
+    public void rotate(double theta, double x, double y) {
+        this.x -= x;
+        this.y -= y;
+        this.rotate(theta);
+        this.x += x;
+        this.y += y;
+    }
+
+    /**
+     * 叉乘
+     */
+    public double cross(Vector2 vector) {
+        return this.x * vector.y - this.y * vector.x;
+    }
 
     public double length(){
         return Math.sqrt(this.x*this.x+this.y*this.y);
     }
 
+    public double squaredLength(){
+        return this.x*this.x+this.y*this.y;
+    }
     public double rad(){
         return StrictMath.atan2(this.y, this.x);
     }
