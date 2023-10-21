@@ -1,11 +1,13 @@
 package physics.engine.objs;
 
 import physics.engine.model.Vector2;
+import physics.engine.world.World;
 
 public abstract class BaseObject implements CanPaint{
     protected double mass;//单位：kg
     public int id;
     public final Vector2 center;
+    public World world;
 
     public BaseObject(Vector2 center) {
         this.center = center;
@@ -28,4 +30,8 @@ public abstract class BaseObject implements CanPaint{
     }
 
     public abstract boolean contains(Vector2 point);
+
+    public void setWorld(World world){
+        this.world=world;
+    }
 }

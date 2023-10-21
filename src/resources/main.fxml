@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.*?>
 <?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,11 +8,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="784.0" prefWidth="1225.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="643.0" prefWidth="1071.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar prefHeight="38.0" prefWidth="1225.0">
+      <MenuBar prefHeight="27.0" prefWidth="1225.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu id="file" mnemonicParsing="false" text="File">
             <items>
               <MenuItem mnemonicParsing="false" text="New" />
                   <MenuItem mnemonicParsing="false" text="Open" />
@@ -19,21 +20,39 @@
                   <MenuItem mnemonicParsing="false" text="Save as..." />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu id="edit" mnemonicParsing="false" text="Edit">
             <items>
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu id="help" mnemonicParsing="false" text="Help">
             <items>
               <MenuItem mnemonicParsing="false" text="About" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
+<<<<<<< HEAD
+      <Canvas height="617.0" layoutY="25.0" width="886.0" />
+      <AnchorPane layoutX="884.0" layoutY="-3.0" prefHeight="645.0" prefWidth="341.0">
+         <children>
+            <SplitPane layoutY="30.0" orientation="VERTICAL" prefHeight="614.0" prefWidth="341.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="324.0">
+                     <children>
+                        <TitledPane id="properties" animated="false" layoutX="-3.0" layoutY="-2.0" prefHeight="24.0" prefWidth="343.0" text="属性" />
+                        <TitledPane animated="false" layoutX="-7.0" layoutY="19.0" prefHeight="23.0" prefWidth="349.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+=======
       <Button layoutX="109.0" layoutY="212.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="162.0" text="变速运动" />
       <Button layoutX="109.0" layoutY="287.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="162.0" text="圆周运动" />
       <Button layoutX="109.0" layoutY="356.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="162.0" text="一般曲线运动" />
       <Label layoutX="65.0" layoutY="140.0" prefHeight="38.0" prefWidth="251.0" text="请选择您所需要分析的运动" textFill="#2c36e5" />
+>>>>>>> 26279fa8320025c01e7f8109d250a42028a96fa8
    </children>
 </AnchorPane>

@@ -1,6 +1,11 @@
 package physics.engine;
 
 import physics.engine.model.Vector2;
+import physics.engine.objs.BaseObject;
+import physics.engine.objs.MotionObject;
+import physics.engine.objs.Polygon;
+
+import java.util.Collection;
 
 public class Util {
     /**
@@ -61,5 +66,12 @@ public class Util {
         }
         center.add(ac);
         return center;
+    }
+
+    public static boolean checkCover(Collection<BaseObject> objects, Polygon thisObj){
+        for (BaseObject o:objects){
+            if (thisObj.covers(o)) return true;
+        }
+        return false;
     }
 }

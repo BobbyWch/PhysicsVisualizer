@@ -1,5 +1,6 @@
 package physics.engine.world;
 
+import javafx.scene.canvas.GraphicsContext;
 import physics.engine.TickListener;
 import physics.engine.model.Ticking;
 import physics.engine.objs.BaseObject;
@@ -20,7 +21,6 @@ public class World implements CanPaint {
         long t1=System.currentTimeMillis(),t2;
         for (int i=0;i<tickNum;i++){
             tick();
-            System.out.println("Tick:"+i);
             t2=System.currentTimeMillis();
             if (l!=null) l.tickEnd();
             if (t2-t1<delay){
@@ -36,11 +36,12 @@ public class World implements CanPaint {
     }
     public void addObject(BaseObject o){
         objects.add(o);
+        o.setWorld(this);
         if (o instanceof Ticking t) tickings.add(t);
-        System.out.println("ticking:"+tickings.size());
     }
     public void removeObject(BaseObject o){
         objects.remove(o);
+        o.setWorld(null);
         if (o instanceof Ticking t) tickings.remove(t);
     }
 
@@ -55,5 +56,14 @@ public class World implements CanPaint {
     @Override
     public void paint(Graphics2D g) {
         for (BaseObject o:objects) o.paint(g);
+    }
+
+    @Override
+    public void drawFx(GraphicsContext context) {
+        for (BaseObject o:objects) o.drawFx(context);
+    }
+
+    public LinkedList<BaseObject> getObjects() {
+        return objects;
     }
 }

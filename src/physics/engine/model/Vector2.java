@@ -100,4 +100,7 @@ public class Vector2 {
                 ", y=" + y +
                 '}';
     }
+    public boolean equals(Vector2 v){
+        return this.x==v.x&&this.y==v.y;
+    }
 }

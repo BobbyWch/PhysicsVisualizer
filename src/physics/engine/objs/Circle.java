@@ -1,5 +1,6 @@
 package physics.engine.objs;
 
+import javafx.scene.canvas.GraphicsContext;
 import physics.engine.model.Vector2;
 
 import java.awt.*;
@@ -29,7 +30,13 @@ public class Circle extends MotionObject implements CanPaint{
     }
 
     @Override
+    public void drawFx(GraphicsContext context) {
+
+    }
+
+    @Override
     public void move(double dx, double dy) {
         center.add(dx,dy);
+        //碰撞检测
     }
 }

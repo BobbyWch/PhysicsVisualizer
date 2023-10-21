@@ -2,6 +2,13 @@ package physics;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+<<<<<<< HEAD
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+=======
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,13 +16,19 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
+>>>>>>> 26279fa8320025c01e7f8109d250a42028a96fa8
 import javafx.stage.Stage;
 import org.w3c.dom.events.EventTarget;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 
+import java.io.IOException;
+
 public class App extends Application {
+<<<<<<< HEAD
+    public static String url = "src/resources/main.fxml";
+=======
     public Scene rootScene;//主页面
     /**
      * 组件库
@@ -25,6 +38,7 @@ public class App extends Application {
     public static URL getUrl(String path){
         return App.class.getClassLoader().getResource(path);
     }
+>>>>>>> 26279fa8320025c01e7f8109d250a42028a96fa8
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -36,6 +50,12 @@ public class App extends Application {
         launch(args);
     }
 
+<<<<<<< HEAD
+    public void init() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(url));
+        MenuBar menuBar=new MenuBar();
+        Menu file = menuBar.getMenus().get(0);
+=======
     public Node getNodeById(String id){
         return (Node) nodes.get(id);
     }
@@ -61,5 +81,6 @@ public class App extends Application {
         AnchorPane root= FXMLLoader.load(getUrl("res/fxml/test.fxml"));
         regNodes(root);
         rootScene=new Scene(root);
+>>>>>>> 26279fa8320025c01e7f8109d250a42028a96fa8
     }
 }

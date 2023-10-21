@@ -1,5 +1,6 @@
 package physics.engine.objs;
 
+import javafx.scene.canvas.GraphicsContext;
 import physics.engine.Util;
 import physics.engine.model.Vector2;
 
@@ -35,6 +36,12 @@ public class Polygon extends MotionObject{
         return true;
     }
 
+    public boolean covers(BaseObject p){
+        for (Vector2 point:this.points){
+            if (p.contains(point)) return true;
+        }
+        return false;
+    }
     @Override
     public void paint(Graphics2D g) {
         int size= points.length;
@@ -46,10 +53,26 @@ public class Polygon extends MotionObject{
     }
 
     @Override
+    public void drawFx(GraphicsContext context) {
+        int size= points.length;
+        Vector2 point=points[points.length-1];
+        context.moveTo(point.x,point.y);
+        for (int i=0;i< size;i++){
+            point=points[i];
+            context.lineTo(point.x,point.y);
+        }
+    }
+
+    @Override
     public void move(double dx, double dy) {
         for (Vector2 p:points){
             p.add(dx,dy);
         }
-        center.add(dx,dy);
+        if (Util.checkCover(world.getObjects(),this)) {
+            for (Vector2 p:points){
+                p.add(-dx,-dy);
+            }
+            System.out.println("no move");
+        }else center.add(dx,dy);
     }
 }
